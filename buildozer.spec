@@ -13,8 +13,6 @@ requirements = python3,kivy==2.3.1,jdatetime,arabic-reshaper,python-bidi
 orientation = portrait
 fullscreen = 0
 
-# icon.filename = %(source.dir)s/icon.png
-
 android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 
 android.api = 33
