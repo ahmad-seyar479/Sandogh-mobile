@@ -8,7 +8,7 @@ source.include_exts = py,png,jpg,kv,ttf,atlas,db
 
 version = 1.0
 
-requirements = python3,kivy==2.3.0,jdatetime,arabic-reshaper,python-bidi
+requirements = python3,kivy==2.3.1,jdatetime,arabic-reshaper,python-bidi
 
 orientation = portrait
 fullscreen = 0
