@@ -3,7 +3,7 @@ name: Build Android APK
 on:
   workflow_dispatch:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
 
 jobs:
   build:
@@ -53,7 +53,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install "Cython==0.29.37"
-          python -m pip install "buildozer==1.5.0"
+          python -m pip install "buildozer==1.6.0"
 
       - name: Check environment
         run: |
@@ -71,10 +71,10 @@ jobs:
           echo "===== Cython ====="
           cython --version
 
-      - name: Clean Buildozer cache
+      - name: Accept Android SDK licenses
         run: |
-          rm -rf .buildozer
-          rm -rf bin
+          mkdir -p "$HOME/.android"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses || true
 
       - name: Build APK
         run: |
