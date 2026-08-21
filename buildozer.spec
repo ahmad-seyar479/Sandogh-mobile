@@ -2,24 +2,27 @@
 title = صندوق اتحادیه
 package.name = sandoghapp
 package.domain = org.sandogh
+
 source.dir = .
 source.include_exts = py,png,jpg,kv,ttf,atlas,db
+
 version = 1.0
 
-requirements = python3,kivy==2.3.0,jdatetime,arabic-reshaper,python-bidi,sqlite3
+requirements = python3,kivy==2.3.0,jdatetime,arabic-reshaper,python-bidi
 
 orientation = portrait
 fullscreen = 0
 
-# اگر آیکون اختصاصی دارید، فایل icon.png (حداقل ۵۱۲×۵۱۲) را در همین پوشه بگذارید و خط زیر را فعال کنید:
 # icon.filename = %(source.dir)s/icon.png
 
-android.permissions = WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
+android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 
 android.api = 33
 android.minapi = 21
+
 android.ndk = 25b
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a,armeabi-v7a
+
 android.allow_backup = True
 
 [buildozer]
